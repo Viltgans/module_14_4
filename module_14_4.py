@@ -51,7 +51,7 @@ async def get_buying_list(message):
     for product in products:
         id_, title, description, price = product
         await message.answer(f'Название: {title} | Описание: {description} | Цена: {price}')
-        with open(f'C:\\Users\\Аснова\\Desktop\\file\\Product{id_}.png', 'rb') as img:
+        with open(f'path/to/file/Product{id_}.png', 'rb') as img:
             await message.answer_photo(img)
     await  message.answer('Выберите продукт для покупки: ', reply_markup=buy_menu)
 
